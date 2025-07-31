@@ -136,7 +136,54 @@ Switched to branch 'dev'
 
 user@Emelyne1024 MINGW64 ~/gitexercise (dev)
 $ git branch -d test
-Deleted branch test (was 10f7f7e).
+Deleted branch test (was 10f7f7e)
+...
 
+### Excercise 2
 
+...bash
+
+C:\Users\user\gitexercise [main ≡ +1 ~0 -0 !]> echo "<h1>Home Page</h1>" > home.html
+C:\Users\user\gitexercise [main ≡ +2 ~0 -0 !]> git add home.html
+C:\Users\user\gitexercise [main ≡ +1 ~0 -0 | +1 ~0 -0 !]> git stash
+Saved working directory and index state WIP on main: 8a66fa5 Submitting readme file contsining Bundle1 Excercise 1
+C:\Users\user\gitexercise [main ≡]> echo "<h1>Home Page</h1>" > about.html
+C:\Users\user\gitexercise [main ≡ +1 ~0 -0 !]> git add about.html
+C:\Users\user\gitexercise [main ≡ +1 ~0 -0 ~]> git stash -m "about"
+Saved working directory and index state On main: about
+C:\Users\user\gitexercise [main ≡]> echo "<h1>Home Page</h1>" > team.html
+C:\Users\user\gitexercise [main ≡ +1 ~0 -0 !]> git add team.html   
+C:\Users\user\gitexercise [main ≡ +1 ~0 -0 ~]> git stash -m "team" 
+Saved working directory and index state On main: team
+C:\Users\user\gitexercise [main ≡]> git stash list
+stash@{0}: On main: team
+stash@{1}: On main: about
+stash@{2}: WIP on main: 8a66fa5 Submitting readme file contsining Bundle1 Excercise 1
+stash@{3}: WIP on main: 8a66fa5 Submitting readme file contsining Bundle1 Excercise 1
+C:\Users\user\gitexercise [main ≡]> git stash pop "stash@{1}"             
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (c2dca7a928adab4dc52bc9ae0c7b9846d8c8b6b9)
+:\Users\user\gitexercise [main ≡ +1 ~0 -0 ~]> git stash pop "stash@{2}"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   index.html
+
+Dropped stash@{2} (63f417793a1932819ded6359392bb27aa84bdcc9)
+C:\Users\user\gitexercise [main ≡ +2 ~1 -0 | +0 ~1 -0 !]> git add .
 
