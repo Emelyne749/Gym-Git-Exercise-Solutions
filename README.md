@@ -240,3 +240,49 @@ C:\Users\user\gitexercise [main ≡ +1 ~0 -0 ~]> git reset --hard
 HEAD is now at a4c5889 Commiting excercise 2 current change
 
 ...
+
+## Bundle 2
+### Excercise 1
+
+...bash
+C:\Users\user\gitexercise [main ≡]> git branch ft/bundle-2
+C:\Users\user\gitexercise [main ≡ +0 ~1 -0 !]> git checkout ft/bundle-2
+M       README.md
+Switched to branch 'ft/bundle-2'
+C:\Users\user\gitexercise [ft/bundle-2 +0 ~1 -0 !]> git merge main
+Already up to date.
+C:\Users\user\gitexercise [ft/bundle-2 +0 ~1 -0 !]> echo "<h1>service Page</h1>" > services.html 
+C:\Users\user\gitexercise [ft/bundle-2 +1 ~1 -0 !]> git add services.html
+C:\Users\user\gitexercise [ft/bundle-2 +1 ~0 -0 | +0 ~1 -0 !]> git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   services.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+C:\Users\user\gitexercise [ft/bundle-2 +1 ~0 -0 | +0 ~1 -0 !]> git commit -m "adding a new services page"
+[ft/bundle-2 65afa0e] adding a new services page
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 services.html
+C:\Users\user\gitexercise [ft/bundle-2 +0 ~1 -0 !]> git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 513 bytes | 36.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Emelyne749/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+ ...
+
+ ### Excercise 2
