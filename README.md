@@ -286,3 +286,24 @@ To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
  ...
 
  ### Excercise 2
+
+...bash
+
+// I accidentally deleted my history, of the previous activities.
+
+C:\Users\user\gitexercise [main|MERGING ≡ +0 ~0 -0 !2 | +1 ~0 -1 !1 !]> git difftool main ft/service-redesign
+
+Viewing (1/2): 'README.md'
+Launch 'vscode' [Y/n]? y
+
+Viewing (2/2): 'services.html'
+Launch 'vscode' [Y/n]? y
+C:\Users\user\gitexercise [main ≡]> git add services.html 
+C:\Users\user\gitexercise [main ≡]> git commit -m "services updated to resolve conflict"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+C:\Users\user\gitexercise [main ≡]> git push
+Everything up-to-date
+C:\Users\user\gitexercise [main ≡]> git merge ft/service-redesign       
