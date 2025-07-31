@@ -186,4 +186,57 @@ Changes not staged for commit:
 
 Dropped stash@{2} (63f417793a1932819ded6359392bb27aa84bdcc9)
 C:\Users\user\gitexercise [main ≡ +2 ~1 -0 | +0 ~1 -0 !]> git add .
+C:\Users\user\gitexercise [main ≡ +2 ~1 -0 | +0 ~1 -0 !]> git add .
+C:\Users\user\gitexercise [main ≡ +2 ~1 -3 ~]> git status
+On branch main
+Your branch is up to date with 'origin/main'.
 
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        new file:   about.html
+        deleted:    file.txt
+        new file:   home.html
+        deleted:    index.html
+        deleted:    style.css
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+C:\Users\user\gitexercise [main ≡ +2 ~1 -3 | +0 ~1 -0 !]> git add .
+C:\Users\user\gitexercise [main ≡ +2 ~1 -3 ~]> git commit -m "Commiting excercise 2 current change"
+[main a4c5889] Commiting excercise 2 current change
+ 6 files changed, 48 insertions(+), 4 deletions(-)
+ create mode 100644 about.html
+ delete mode 100644 file.txt
+ create mode 100644 home.html
+ delete mode 100644 index.html
+ delete mode 100644 style.css
+C:\Users\user\gitexercise [main ↑1]> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.29 KiB | 1.29 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
+   8a66fa5..a4c5889  main -> main
+C:\Users\user\gitexercise [main ≡]> git  stash list
+stash@{0}: On main: team
+stash@{1}: WIP on main: 8a66fa5 Submitting readme file contsining Bundle1 Excercise 1
+C:\Users\user\gitexercise [main ≡]> git stash pop "stash@{0}"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (1e54a8e182534727a9374cc5275b7a528a6d5188)
+C:\Users\user\gitexercise [main ≡ +1 ~0 -0 ~]> git reset --hard
+HEAD is now at a4c5889 Commiting excercise 2 current change
+
+...
