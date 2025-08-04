@@ -446,3 +446,62 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
 ...
+
+### Excercise 2
+
+...bash 
+
+C:\Users\user\Desktop\gitexercise [main ≡]> git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+C:\Users\user\Desktop\gitexercise [ft/faq-page ≡]> git branch ft/home-page-redesign
+C:\Users\user\Desktop\gitexercise [ft/faq-page ≡]> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+C:\Users\user\Desktop\gitexercise [main ≡]> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+C:\Users\user\Desktop\gitexercise [main ≡ +0 ~1 -0 !]> git add .
+C:\Users\user\Desktop\gitexercise [main ≡ +0 ~1 -0 ~]> git commit -m "Changes made to the home page"
+[main e3bc78f] Changes made to the home page
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+C:\Users\user\Desktop\gitexercise [main ↑1]> git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+C:\Users\user\Desktop\gitexercise [ft/home-page-redesign]> git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+C:\Users\user\Desktop\gitexercise [ft/home-page-redesign]> git add .
+C:\Users\user\Desktop\gitexercise [ft/home-page-redesign +0 ~1 -0 ~]> git commit -m "Changes made to the home page from home page redesign branch"
+[ft/home-page-redesign 7f8dacd] Changes made to the home page from home page redesign branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+C:\Users\user\Desktop\gitexercise [ft/home-page-redesign]> git push -u origin ft/home-page-redesign                             
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 1.85 KiB | 633.00 KiB/s, done.
+Total 17 (delta 10), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (10/10), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Emelyne749/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+C:\Users\user\Desktop\gitexercise [ft/home-page-redesign ≡]> git checkout main                                                  
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+C:\Users\user\Desktop\gitexercise [main ↑1]> git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
+   d9a413b..e3bc78f  main -> main
+
+   ...
