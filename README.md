@@ -307,3 +307,142 @@ nothing to commit, working tree clean
 C:\Users\user\gitexercise [main ≡]> git push
 Everything up-to-date
 C:\Users\user\gitexercise [main ≡]> git merge ft/service-redesign       
+
+...
+
+## Bundle 3
+### Excercise 1
+
+...bash
+
+C:\Users\user\Desktop\gitexercise [main ≡]> git branch ft/team-page  
+C:\Users\user\Desktop\gitexercise [main ≡]> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+C:\Users\user\Desktop\gitexercise [ft/team-page]> git add team.html
+C:\Users\user\Desktop\gitexercise [ft/team-page +1 ~0 -0 ~]> git commit -u origin ft/team-page
+error: pathspec 'origin' did not match any file(s) known to git
+error: pathspec 'ft/team-page' did not match any file(s) known to git
+C:\Users\user\Desktop\gitexercise [ft/team-page +1 ~0 -0 ~]> git commit -m "Created a new page called team.html"
+[ft/team-page 8d2851d] Created a new page called team.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+C:\Users\user\Desktop\gitexercise [ft/team-page]> git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+C:\Users\user\Desktop\gitexercise [ft/team-page]> git push -u origin ft/team-page  
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 451 bytes | 451.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Emelyne749/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+C:\Users\user\Desktop\gitexercise [ft/team-page ≡]> git checkout main        
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+C:\Users\user\Desktop\gitexercise [main ≡]> git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+C:\Users\user\Desktop\gitexercise [ft/contact-page]> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+C:\Users\user\Desktop\gitexercise [ft/team-page ≡]> git log
+commit 8d2851d0031f9764a2ab5f374b4c6801143815b1 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Emelyne1024 <emelyneishimwe749@gmail.com>
+Date:   Mon Aug 4 08:22:27 2025 +0200
+
+    Created a new page called team.html
+
+commit 47be825ceb54aacdeb101e7fc031273ca545ff06 (origin/main, origin/HEAD, main, ft/contact-page)
+Author: Emelyne1024 <emelyneishimwe749@gmail.com>
+Date:   Thu Jul 31 13:58:03 2025 +0200
+
+     Updated readme file with bundle 2 excercise 2
+
+commit 9ba0d66221d761617a704d9ed2fb90c30421c3c5
+Merge: 6f3930d db93993
+Author: Emelyne1024 <emelyneishimwe749@gmail.com>
+Date:   Thu Jul 31 13:27:06 2025 +0200
+
+C:\Users\user\Desktop\gitexercise [ft/team-page ≡]> git checkout ft/contact-page   
+Switched to branch 'ft/contact-page'
+C:\Users\user\Desktop\gitexercise [ft/contact-page]> git cherry-pick 8d2851d0031f9764a2ab5f374b4c6801143815b1
+[ft/contact-page afecadf] Created a new page called team.html
+ Date: Mon Aug 4 08:22:27 2025 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+C:\Users\user\Desktop\gitexercise [ft/contact-page]> git add contact.html
+C:\Users\user\Desktop\gitexercise [ft/contact-page +1 ~0 -0 ~]> git commit -m "added a new page called contact"
+[ft/contact-page 3e97bee] added a new page called contact
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+C:\Users\user\Desktop\gitexercise [ft/contact-page]> git push -u origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 731 bytes | 243.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Emelyne749/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+C:\Users\user\Desktop\gitexercise [ft/contact-page ≡]> git checkout ft/faq-page    
+error: pathspec 'ft/faq-page' did not match any file(s) known to git
+C:\Users\user\Desktop\gitexercise [ft/contact-page ≡]> git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+C:\Users\user\Desktop\gitexercise [ft/faq-page]> git add faq.html
+C:\Users\user\Desktop\gitexercise [ft/faq-page +1 ~0 -0 ~]> git commit -m "added a new page called faq.html"
+[ft/faq-page 36698cc] added a new page called faq.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+C:\Users\user\Desktop\gitexercise [ft/faq-page]> git push -u origin ft/faq-page    
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 450 bytes | 450.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Emelyne749/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+C:\Users\user\Desktop\gitexercise [ft/faq-page ≡]> git revert 8d2851d0031f9764a2ab5f374b4c6801143815b1
+[ft/faq-page 0e88926] Revert "Created a new page called team.html"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+C:\Users\user\Desktop\gitexercise [ft/faq-page ↑1]> git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 292 bytes | 292.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
+   36698cc..0e88926  ft/faq-page -> ft/faq-page
+C:\Users\user\Desktop\gitexercise [ft/faq-page ≡]> git checkout main           
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+...
