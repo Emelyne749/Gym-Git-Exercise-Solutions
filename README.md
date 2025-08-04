@@ -505,3 +505,55 @@ To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
    d9a413b..e3bc78f  main -> main
 
    ...
+
+   ## Bundle 4
+
+  ### Excercise 1
+
+  ... bash
+
+  C:\Users\user\Desktop\gitexercise [main ≡]> git remote add git-copy https://github.com/Emelyne749/Gym-Git-Exercise-Solutions-2.git 
+C:\Users\user\Desktop\gitexercise [main ≡]> git remote
+git-copy
+origin
+C:\Users\user\Desktop\gitexercise [main ≡ +0 ~1 -0 !]> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+C:\Users\user\Desktop\gitexercise [main ≡ +0 ~1 -0 !]> git add home.html
+C:\Users\user\Desktop\gitexercise [main ≡ +0 ~1 -0 ~]> git commit -m "changes made "
+[main 3190189] changes made
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+C:\Users\user\Desktop\gitexercise [main ↑1]> git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 328 bytes | 328.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions.git
+   30ddb83..3190189  main -> main
+C:\Users\user\Desktop\gitexercise [main ≡]> git push git copy
+error: src refspec copy does not match any
+error: failed to push some refs to 'git'
+C:\Users\user\Desktop\gitexercise [main ≡]> git push git-copy
+Enumerating objects: 52, done.
+Counting objects: 100% (52/52), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (47/47), done.
+Writing objects: 100% (52/52), 9.64 KiB | 469.00 KiB/s, done.
+Total 52 (delta 25), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (25/25), done.
+To https://github.com/Emelyne749/Gym-Git-Exercise-Solutions-2.git
+ * [new branch]      main -> main
+
+ ...
+
+ 
